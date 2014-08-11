@@ -47,14 +47,6 @@ RSpec.describe Words, :type => :model do
     end
   end
 
-  # describe 'Cheking model param color' do
-  #
-  #   context "check to default black color" do
-  #     @word = FactoryGirl.build(:word, :color => "")
-  #       @word.color.should eql? "000"
-  #   end
-  #
-  # end
 end
 
 
