@@ -55,6 +55,18 @@ RSpec.describe WordStatistic, :type => :model do
 
   end
 
+  describe 'Cheking model param [:know, :unknow]' do
+
+    context "when is string" do
+      before do
+        subject.know = "asdasd"
+        subject.unknow = "asdasd"
+      end
+      it { expect(subject.valid?).to be false }
+    end
+
+  end
+
 end
 
 
