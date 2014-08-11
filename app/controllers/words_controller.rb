@@ -3,7 +3,7 @@ class WordsController < ApplicationController
 
   # GET /words
   def index
-    @words = Word.all
+    @words = Word.all.paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /words/1
