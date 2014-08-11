@@ -7,6 +7,8 @@ gem 'haml'
 gem 'haml-rails'
 gem 'bson_ext'
 gem 'rails-backbone'
+gem 'will_paginate'
+gem 'foundation-rails'
 
 group :assets do
 	gem 'sass-rails'
