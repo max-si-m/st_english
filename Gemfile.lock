@@ -176,6 +176,7 @@ DEPENDENCIES
   rails-backbone
   rspec-rails
   sass-rails
+  spork
   spork-rails
   sqlite3
   uglifier

@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140811182437) do
+ActiveRecord::Schema.define(version: 20140811183055) do
+
+  create_table "word_statistics", force: true do |t|
+    t.integer  "word_id"
+    t.integer  "views"
+    t.integer  "know"
+    t.integer  "unknow"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "word_statistics", ["word_id"], name: "index_word_statistics_on_word_id"
 
   create_table "words", force: true do |t|
     t.string   "original"

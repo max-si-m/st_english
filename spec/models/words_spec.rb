@@ -7,7 +7,6 @@ RSpec.describe Words, :type => :model do
 
   it { should respond_to(:original) }
   it { should respond_to(:translit) }
-  it { should respond_to(:color) }
 
   it { should be_valid }
 

@@ -22,4 +22,5 @@ group :test, :development do
 	gem 'database_cleaner'
 	gem 'jasmine'
 	gem 'spork-rails'
+  gem "spork"
 end
