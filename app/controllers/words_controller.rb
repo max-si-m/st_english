@@ -24,7 +24,7 @@ class WordsController < ApplicationController
     @word = Word.new(word_params)
 
     if @word.save
-      redirect_to @word, notice: 'Word was successfully created.'
+      redirect_to root_path, notice: 'Word was successfully created.'
     else
       render :new
     end
