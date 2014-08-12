@@ -30,7 +30,7 @@ RSpec.describe WordStatistic, :type => :model do
         subject.word_id = 123123
       end
       it "don't foud word_id" do
-        expect(Words.where(id: subject.word_id)).to be_empty
+        expect(Word.where(id: subject.word_id)).to be_empty
       end
     end
 
