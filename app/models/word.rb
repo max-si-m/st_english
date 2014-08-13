@@ -4,6 +4,7 @@ class Word < ActiveRecord::Base
   has_one :word_statistic, dependent: :destroy
   validates :original, :translit, presence: true, length: {maximum: 40, minimum: 2}
 
+  scope :from_date, ->(start_time, finish_time) { where( :created_at => start_time..finish_time ) }
 
   protected
   def create_relation
