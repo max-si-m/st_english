@@ -1,6 +1,10 @@
-- @words.each do |word|
+-#TODO: datetiepicker!!
+= form_tag(learn_start_path, method: "post") do
+  = label_tag(:start_date, "Start date:")
+  = text_field_tag(:start_date)
+  = label_tag(:finish_date, "Finish date:")
+  = text_field_tag(:finish_date)
 
-  Originals
-  = word.original
+  = submit_tag("START")
 
 

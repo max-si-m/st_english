@@ -11,14 +11,14 @@ gem 'will_paginate'
 gem 'foundation-rails'
 gem 'better_errors'
 gem 'binding_of_caller'
-gem 'auto_build'
+gem 'jquery-rails'
+gem 'rails-footnotes'
 
 group :assets do
 	gem 'sass-rails'
 	gem 'coffee-rails'
 	gem 'uglifier'
 end
-gem 'jquery-rails'
 
 group :test, :development do
 	gem 'rspec-rails'
