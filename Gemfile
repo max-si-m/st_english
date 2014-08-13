@@ -9,6 +9,9 @@ gem 'bson_ext'
 gem 'rails-backbone'
 gem 'will_paginate'
 gem 'foundation-rails'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'auto_build'
 
 group :assets do
 	gem 'sass-rails'
