@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
   get 'learn/index'
-
   get 'learn/next'
+  post 'learn/start'
+
 
   resources :words
 
