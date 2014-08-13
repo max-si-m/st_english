@@ -2,7 +2,7 @@ require 'rails_helper'
 RSpec.describe WordStatistic, :type => :model do
 
   before(:each) do
-    @word = FactoryGirl.create(:word)
+    @word = Word.new( :original => "test", :translit => "тест" )
     #@word_statistic = FactoryGirl.create(:word_statistic, word_id: @word)
     @word_statistic = WordStatistic.create!(word_id: "1",views: "1", know: "1", unknow: "1")
   end
