@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe Words, :type => :model do
+RSpec.describe Word, :type => :model do
 
   let(:attrs) { FactoryGirl.attributes_for(:word) }
-  subject(:word) { Words.new(attrs) }
+  subject(:word) { Word.new(attrs) }
 
   it { should respond_to(:original) }
   it { should respond_to(:translit) }
