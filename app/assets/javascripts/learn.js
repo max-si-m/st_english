@@ -4,3 +4,13 @@
 $('#show_translate').click(function() {
     $(".hide_block").show("slow");
 });
+
+$(document).keydown(function(eventObject){
+    if (eventObject.which == 40 ) {
+        $(".hide_block").show("slow");
+    }
+    if (eventObject.which == 38 ) {
+        $(".hide_block").hide("slow");
+    }
+
+});

@@ -14,6 +14,7 @@ gem 'binding_of_caller'
 gem 'jquery-rails'
 gem 'rails-footnotes'
 gem 'rails_temporary_data'
+gem 'brakeman'
 
 group :assets do
 	gem 'sass-rails'

@@ -1,5 +1,5 @@
 %p
-.center_h1 ORIGINAL WORD
+  .center_h1 ORIGINAL WORD
 %p
 .curved-hz-1
   = @word.original
@@ -10,7 +10,6 @@
   %p
   .curved-hz-1
     = @word.translit
-
-
-= link_to "NEXT", learn_next_path
-%a{:id => "show_translate"} SHOW TRANSLATE
+%br
+%p
+  %a{:class => "button expand", :href =>learn_next_path} NEXT
