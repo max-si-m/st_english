@@ -49,6 +49,9 @@
 font {
     text-align: right;
 }
+.center_box {
+    text-align: center;
+}
 
 .hide_block {
     display: none;

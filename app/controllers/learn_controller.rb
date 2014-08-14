@@ -12,6 +12,7 @@ class LearnController < ApplicationController
   end
 
   def next
+
   end
 
   protected
@@ -26,6 +27,10 @@ class LearnController < ApplicationController
 
   def set_word
     @word = get_tmp_data("learn_words").data.first
+  end
+
+  def change_position
+
   end
 
 end
