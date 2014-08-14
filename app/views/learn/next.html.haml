@@ -4,5 +4,13 @@
 .curved-hz-1
   = @word.original
 
+.hide_block
+  %p
+  .center_h1 TRANSLATE
+  %p
+  .curved-hz-1
+    = @word.translit
+
 
 = link_to "NEXT", learn_next_path
+%a{:id => "show_translate"} SHOW TRANSLATE

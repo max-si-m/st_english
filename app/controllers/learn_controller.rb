@@ -8,10 +8,10 @@ class LearnController < ApplicationController
   end
 
   def start
+    render "next"
   end
 
   def next
-    render start
   end
 
   protected

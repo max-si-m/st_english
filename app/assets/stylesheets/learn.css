@@ -9,10 +9,11 @@
 
     padding: 10% 1% 1% 1%;
     font-weight: bold;
-    font-size: 90px;
+    font-size: 55px;
     font-family: "Courier New";
 
     text-align: center;
+    margin: auto;
 }
 
 .curved-hz-1:before,
@@ -49,6 +50,9 @@ font {
     text-align: right;
 }
 
+.hide_block {
+    display: none;
+}
 
 /*style*/
 .center_h1 {
