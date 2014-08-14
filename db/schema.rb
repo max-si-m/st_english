@@ -11,13 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140811183055) do
+ActiveRecord::Schema.define(version: 20140814104842) do
+
+  create_table "temporary_data", force: true do |t|
+    t.text     "data"
+    t.datetime "expires_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "word_statistics", force: true do |t|
     t.integer  "word_id"
-    t.integer  "views"
-    t.integer  "know"
-    t.integer  "unknow"
+    t.integer  "views",      default: 0
+    t.integer  "know",       default: 0
+    t.integer  "unknow",     default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
