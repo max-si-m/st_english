@@ -1,4 +1,9 @@
-= form_tag root_path, :method => :get, :id => "search_form" do
-  %p
-  = text_field_tag :search, params[:search]
-  = submit_tag "Search", :name => nil
+%p
+.row
+ = form_tag root_path, :method => :get, :id => "search_form" do
+  .large-6.columns
+   .row.collapse
+    .small-10.columns
+     = text_field_tag :search, params[:search], :placeholder=> "Search"
+    .small-2.columns
+     = submit_tag "Go", :name => nil, class: 'button postfix'
