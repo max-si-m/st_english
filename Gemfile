@@ -15,6 +15,7 @@ gem 'jquery-rails'
 gem 'rails-footnotes'
 gem 'rails_temporary_data', path: "/other/rails_app/rails_temporary_data"
 gem 'brakeman'
+gem 'annotate', "~> 2.6.5"
 
 group :assets do
 	gem 'sass-rails'

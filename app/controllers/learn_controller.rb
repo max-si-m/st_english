@@ -31,6 +31,7 @@ class LearnController < ApplicationController
     @words_arr.insert(size, first_tmp)
     update_tmp_data("learn_words", @words_arr.to_a )
     @word = first_tmp
+    @word.word_statistic.increment_views
   end
 
   # def change_position(data)
