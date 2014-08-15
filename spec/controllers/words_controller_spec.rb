@@ -24,11 +24,11 @@ RSpec.describe WordsController, :type => :controller do
   # Word. As you add validations to Word, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {:original => "test", :translit => "asdasd"}
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {:original => "t", :translit => "a"}
   }
 
   # This should return the minimal set of values that should be in the session
@@ -81,10 +81,6 @@ RSpec.describe WordsController, :type => :controller do
         expect(assigns(:word)).to be_persisted
       end
 
-      it "redirects to the created word" do
-        post :create, {:word => valid_attributes}, valid_session
-        expect(response).to redirect_to(Word.last)
-      end
     end
 
     describe "with invalid params" do

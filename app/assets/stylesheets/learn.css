@@ -1,0 +1,64 @@
+.curved-hz-1 {
+    position:relative;
+    width:80%;
+    height: 200px;
+    background:#fff;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+    padding: 10% 1% 1% 1%;
+    font-weight: bold;
+    font-size: 55px;
+    font-family: "Courier New";
+
+    text-align: center;
+    margin: auto;
+}
+
+.curved-hz-1:before,
+.curved-hz-1:after {
+    content:"";
+    position:absolute;
+    z-index:-2;
+
+}
+
+.curved-hz-1:before {
+    top:50%;
+    bottom:0px;
+    left:10px;
+    right:10px;
+    -webkit-box-shadow:0 0 15px rgba(0,0,0,0.6);
+    -moz-box-shadow:0 0 15px rgba(0,0,0,0.6);
+    box-shadow:0 0 15px rgba(0,0,0,0.6);
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+
+.curved-hz-1 p {
+    font-size:16px;
+    font-weight:bold;
+}
+.right {
+    position: absolute;
+    right: 10px;
+    right: 1%;
+
+}
+font {
+    text-align: right;
+}
+.center_box {
+    text-align: center;
+}
+
+.hide_block {
+    display: none;
+}
+
+/*style*/
+.center_h1 {
+    text-align: center;
+    font-size: 25px;
+}

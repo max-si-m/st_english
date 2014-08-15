@@ -30,12 +30,6 @@ Spork.prefork do
 end
 
 Spork.each_run do
-
-  #Подгружаем каждый раз все файлы из директории app/
-  Dir["#{Rails.root}/app/**/*.rb"].each {|file| load file }
-  #Подгружаем файл с описанием маршрутизации
-  load "#{Rails.root}/config/routes.rb"
-
 end
 
 

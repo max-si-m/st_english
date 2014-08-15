@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'learn/index'
+  get 'learn/know'
+  get 'learn/unknow'
+  post 'learn/start'
+
+
   resources :words
 
   # The priority is based upon order of creation: first created -> highest priority.

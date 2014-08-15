@@ -11,14 +11,17 @@ gem 'will_paginate'
 gem 'foundation-rails'
 gem 'better_errors'
 gem 'binding_of_caller'
-gem 'auto_build'
+gem 'jquery-rails'
+gem 'rails-footnotes'
+gem 'rails_temporary_data', path: "/other/rails_app/rails_temporary_data"
+gem 'brakeman'
+gem 'annotate', "~> 2.6.5"
 
 group :assets do
 	gem 'sass-rails'
 	gem 'coffee-rails'
 	gem 'uglifier'
 end
-gem 'jquery-rails'
 
 group :test, :development do
 	gem 'rspec-rails'
