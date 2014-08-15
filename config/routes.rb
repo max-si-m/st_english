@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
   get 'learn/index'
-  get 'learn/next'
+  get 'learn/know'
+  get 'learn/unknow'
   post 'learn/start'
 
 

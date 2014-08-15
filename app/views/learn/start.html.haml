@@ -1,4 +1,16 @@
-= @word.original
-= link_to "NEXT", learn_next_path
+%p
+  .center_h1 ORIGINAL WORD
+%p
+.curved-hz-1
+  = @word.original
 
-
+.hide_block
+  %p
+  .center_h1 TRANSLATE
+  %p
+  .curved-hz-1
+    = @word.translit
+%br
+%p.center_box
+  %a{:class => "button alert", :href =>learn_unknow_path} UNKNOWN
+  %a{:class => "button success", :href =>learn_know_path} KNOW

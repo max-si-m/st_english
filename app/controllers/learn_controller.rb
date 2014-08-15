@@ -1,17 +1,22 @@
 class LearnController < ApplicationController
   include RailsTemporaryData::ControllerHelpers
   before_action :get_words, only: :start
-  before_action :set_word, only: [:start, :next]
+  before_action :set_word, only: [:start, :know, :unknow]
+  before_action :know_word, only: :know
+  before_action :unknow_word, only: :unknow
 
 
   def index
   end
 
   def start
-    render "next"
   end
 
-  def next
+  def know
+    render "start"
+  end
+  def unknow
+    render "start"
   end
 
   protected
@@ -26,25 +31,24 @@ class LearnController < ApplicationController
 
   def set_word
     @words_arr = get_tmp_data("learn_words").data
-    first_tmp = @words_arr.shift
-    size = SecureRandom.random_number(@words_arr.size)
-    @words_arr.insert(size, first_tmp)
-    update_tmp_data("learn_words", @words_arr.to_a )
-    @word = first_tmp
-    @word.word_statistic.increment_views
+    @word = @words_arr.shift
   end
 
-  # def change_position(data)
-  #   @words = get_tmp_data("learn_words").data
-  #   size = SecureRandom.random_number(@words.size)
-  #   @words.insert(size, data)
-  #   puts "===> SIZE"
-  #   puts size
-  #   puts "===> DATA"
-  #   puts data
-  #
-  #   # puts @words.each { |k| k.id }
-  #   set_tmp_data("learn_words", @words.to_a, Time.now + 1.days)
-  # end
+  def know_word
+    @word.word_statistic.increment_know
+    @words_arr.push(@word)
+    update_data
+  end
+
+  def unknow_word
+    @word.word_statistic.increment_unknow
+    size = rand( @words_arr.size-5.abs..@words_arr.size )
+    @words_arr.insert(size, @word)
+    update_data
+  end
+
+  def update_data()
+    update_tmp_data("learn_words", @words_arr.to_a )
+  end
 
 end
