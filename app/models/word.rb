@@ -19,6 +19,14 @@ class Word < ActiveRecord::Base
   default_scope ->{order("id DESC")}
   attr_accessor :data_array
 
+  def self.search(search)
+    if search
+      where('original LIKE :search_param OR translit LIKE :search_param', :search_param => "%#{search}%")
+    else
+      all
+    end
+  end
+
   protected
   def create_relation
     WordStatistic.create(word: self)

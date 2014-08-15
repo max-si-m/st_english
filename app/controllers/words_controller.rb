@@ -3,8 +3,12 @@ class WordsController < ApplicationController
 
   # GET /words
   def index
-    @words = Word.all.paginate(:page => params[:page], :per_page => 10)
+    @words = Word.search(params[:search]) .paginate(:page => params[:page], :per_page => 10)
     @word = Word.new
+    respond_to do |format|
+      format.html {render "index"}
+      format.js {}
+    end
   end
 
   # GET /words/1
