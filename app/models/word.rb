@@ -5,7 +5,7 @@ class Word < ActiveRecord::Base
   validates :original, :translit, presence: true, length: {maximum: 40, minimum: 2}
 
   scope :from_date, ->(start_time, finish_time) { where( :created_at => start_time..finish_time ) }
-  default_scope ->{order("created_at DESC")}
+  default_scope ->{order("id DESC")}
   attr_accessor :data_array
 
   protected

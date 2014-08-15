@@ -12,7 +12,6 @@ class LearnController < ApplicationController
   end
 
   def next
-
   end
 
   protected
@@ -26,11 +25,25 @@ class LearnController < ApplicationController
   end
 
   def set_word
-    @word = get_tmp_data("learn_words").data.first
+    @words_arr = get_tmp_data("learn_words").data
+    first_tmp = @words_arr.shift
+    size = SecureRandom.random_number(@words_arr.size)
+    @words_arr.insert(size, first_tmp)
+    update_tmp_data("learn_words", @words_arr.to_a )
+    @word = first_tmp
   end
 
-  def change_position
-
-  end
+  # def change_position(data)
+  #   @words = get_tmp_data("learn_words").data
+  #   size = SecureRandom.random_number(@words.size)
+  #   @words.insert(size, data)
+  #   puts "===> SIZE"
+  #   puts size
+  #   puts "===> DATA"
+  #   puts data
+  #
+  #   # puts @words.each { |k| k.id }
+  #   set_tmp_data("learn_words", @words.to_a, Time.now + 1.days)
+  # end
 
 end

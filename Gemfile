@@ -13,7 +13,7 @@ gem 'better_errors'
 gem 'binding_of_caller'
 gem 'jquery-rails'
 gem 'rails-footnotes'
-gem 'rails_temporary_data'
+gem 'rails_temporary_data', path: "/other/rails_app/rails_temporary_data"
 gem 'brakeman'
 
 group :assets do
