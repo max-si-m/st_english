@@ -17,9 +17,11 @@
       %td= word.word_statistic.unknow
       %td= link_to 'Show', word
       %td= link_to 'Edit', edit_word_path(word)
-      -#%td= link_to 'Destroy', word, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Destroy', root_path, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
 = link_to 'New Word', new_word_path
 = will_paginate @words
+
+= render 'form'
