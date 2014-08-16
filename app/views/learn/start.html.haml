@@ -1,15 +1,4 @@
-%p
-  .center_h1 ORIGINAL WORD
-%p
-.curved-hz-1
-  = @word.original
-
-.hide_block
-  %p
-  .center_h1 TRANSLATE
-  %p
-  .curved-hz-1
-    = @word.translit
+= if session[:way] == "translate"; render "translate" else  render "original" end
 %br
 %p.center_box
   %a{:class => "button alert", :href =>learn_unknow_path, :id => "unknow"} UNKNOWN
