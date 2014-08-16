@@ -29,6 +29,7 @@ class LearnController < ApplicationController
     else
       @words = Word.from_date(3.day.ago, Time.now)
     end
+    session[:way] = params[:way]
     set_tmp_data("learn_words", @words.to_a, Time.now + 1.days)
   end
 
