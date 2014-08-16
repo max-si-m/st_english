@@ -1,0 +1,20 @@
+%table
+  %tr
+    %th Original
+    %th Translit
+    %th Views
+    %th Know
+    %th UnKnow
+
+  - @words.each do |word|
+    %tr
+      %td= word.original
+      %td= word.translit
+      %td= word.word_statistic.views
+      %td= word.word_statistic.know
+      %td= word.word_statistic.unknow
+      %td= link_to 'Edit', edit_word_path(word)
+      %td= button_to 'Destroy', word, method: :delete, :class => 'postfix', data: { :confirm => 'Are you sure?' }
+%br
+
+= will_paginate @words
