@@ -52,7 +52,7 @@ class LearnController < ApplicationController
 
   def unknow_word
     @word.word_statistic.increment_unknow
-    size = rand( @words_arr.size-5.abs.to_i..@words_arr.size )
+    size = rand( 1..@words_arr.size )
     @words_arr.insert(size, @word)
     update_data
   end
