@@ -8,9 +8,10 @@
    .large-4.columns
     %b END DATE
     = date_field nil, :finish_date
-    .row
-     = label_tag(:original, "Original")
-     = radio_button_tag(:way, "original")
-     = label_tag(:translate, "Translate")
+   %p
+    %b Original
+    = radio_button_tag(:way, "original")
+    %p
+     %b Translate
      = radio_button_tag(:way, "translate")
   = submit_tag 'START', class: 'button postfix'

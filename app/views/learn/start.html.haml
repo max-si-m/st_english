@@ -1,4 +1,4 @@
-= if session[:way] == "translit"; render "translate" else  render "original" end
+= if session[:way] == "translate"; render "translate" else  render "original" end
 %br
 %p.center_box
   %a{:class => "button alert", :href =>learn_unknow_path} UNKNOWN
