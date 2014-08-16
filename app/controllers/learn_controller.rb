@@ -32,6 +32,12 @@ class LearnController < ApplicationController
   def set_word
     @words_arr = get_tmp_data("learn_words").data
     @word = @words_arr.shift
+    if @word.nil?
+      redirect_to root_path, alert: "WORDS NOT FOUND!"
+    else
+      @word.word_statistic.increment_views
+    end
+
   end
 
   def know_word
@@ -42,7 +48,7 @@ class LearnController < ApplicationController
 
   def unknow_word
     @word.word_statistic.increment_unknow
-    size = rand( @words_arr.size-5.abs..@words_arr.size )
+    size = rand( @words_arr.size-5..@words_arr.size )
     @words_arr.insert(size, @word)
     update_data
   end
