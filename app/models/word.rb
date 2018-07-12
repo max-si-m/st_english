@@ -33,5 +33,3 @@ class Word < ActiveRecord::Base
   end
 
 end
-#TODO: sorting words
-#arr.insert(3, 'apple')  #=> [0, 1, 2, 'apple', 3, 4, 5, 6]
